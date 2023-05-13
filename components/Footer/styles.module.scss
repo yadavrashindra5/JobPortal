@@ -1,0 +1,155 @@
+@import "../../src/styles/theme";
+
+.mainContainer {
+  padding: 1em;
+  background-color: RGB(1, 11, 29);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  @include breakpoints("large-tab"){
+    padding:3em;
+  }
+  @include breakpoints("xl-tab")
+  {
+    padding: 5rem 10em;
+  }
+  @include breakpoints("desktop"){
+    padding: 5em 20em;
+  }
+  .upperContent {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    box-sizing: border-box;
+    padding: 1em;
+    line-height: 1.8em;
+    @include breakpoints("tab"){
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 1em;
+    }
+
+    @include breakpoints("large-tab"){
+      // padding:5em;
+      flex-wrap: nowrap;
+    }
+
+    .aboutSection {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      .title {
+        font-size: 1.5em;
+      }
+      .description {
+        font-size: 1em;
+      }
+      @include breakpoints("tab"){
+        width: 30%;
+      }
+    }
+
+    .contactSection {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      .title {
+        font-size: 1.5em;
+      }
+      .description {
+        font-size: 1em;
+      }
+      .contactInfo {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5em;
+        & > li:hover {
+          color: red;
+          cursor: pointer;
+        }
+      }
+      @include breakpoints("tab"){
+        width: 30%;
+      }
+    }
+
+    .linkSection {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      .title {
+        font-size: 1.5em;
+      }
+      & > ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.3em;
+        & > li:hover {
+          color: red;
+          cursor: pointer;
+        }
+      }
+      @include breakpoints("tab"){
+        width: 30%;
+      }
+    }
+
+    .newsSection {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      .title {
+        font-size: 1.5em;
+      }
+      .description {
+        font-size: 1em;
+      }
+      @include breakpoints("tab"){
+        width: 30%;
+      }
+    }
+  }
+  .middleContent{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    @include breakpoints("tab"){
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .lowerContent{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    &>section>div{
+      line-height: 1.5em;
+    }
+    .socialMedia{
+      display: flex;
+      column-gap: 1.8em;
+      .facebook:hover{
+        color: blue;
+      }
+      .twitter:hover{
+        color: blue;
+      }
+      .linkedIn:hover{
+        color: blue;
+      }
+      .instagram:hover{
+        color: red;
+      }
+    }
+    @include breakpoints("large-tab"){
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+}

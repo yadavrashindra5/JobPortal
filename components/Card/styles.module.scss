@@ -1,0 +1,27 @@
+@import "../../src/styles/theme";
+
+.mainContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+    padding: 2em;
+    text-align: justify;
+    color: white;
+    background-color: RGB(39, 50, 127);
+    @include breakpoints('tab'){
+        width: 48%;
+    }
+    @include breakpoints('large-tab'){
+        width: 25%;
+        height: 32vh;
+    }
+    .heading{
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .description{
+        font-size: 1.2em;
+    }
+}

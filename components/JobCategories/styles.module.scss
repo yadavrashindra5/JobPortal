@@ -1,0 +1,79 @@
+@import "../../src/styles/theme";
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  row-gap: 1em;
+  &>div {
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.3em;
+    color: $error;
+  }
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+    font-size: 2em;
+  }
+  .jobCategories {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      box-shadow: 10px 10px 10px rgb(178, 156, 156);
+      transition: box-shadow 1s;
+      &:hover{
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+      }
+      img {
+        display: block;
+        width: 100%;
+        margin: auto;
+        height: 100%;
+      }
+      h5 {
+        padding: 0.5em;
+        font-size: 1em;
+      }
+      p {
+        padding: 0.5em;
+        font-size: 1em;
+      }
+      @include breakpoints('tab'){
+        width: 30%;
+        margin:0;
+      }
+      @include breakpoints('large-tab'){
+        width: 22%;
+      }
+    }
+    @include breakpoints('tab'){
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 1.5em;
+      }
+      @include breakpoints('large-tab'){
+        flex-direction: row;
+        column-gap: 1.5em;
+        justify-content: center;
+      }
+  }
+
+  @include breakpoints('tab'){
+    width: 90%;
+    margin: auto;
+  }
+  @include breakpoints('large-tab'){
+    width: 70%;
+    margin: auto;
+    margin: 4em auto;
+  }
+}
