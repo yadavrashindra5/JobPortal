@@ -1,0 +1,20 @@
+@import "../../src/styles/theme";
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  .recentJob {
+    text-align: center;
+    font-size: 1em;
+    color: $error;
+  }
+  .featuresJob {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 800;
+    color: RGB(40, 57, 90);
+  }
+}

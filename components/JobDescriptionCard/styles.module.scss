@@ -1,0 +1,66 @@
+@import "../../src/styles/theme";
+
+.outerContainer {
+  display: flex;
+  .innerContainer {
+    width: 90vw;
+    padding: 1em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+    margin: 1em auto;
+    color: RGB(40, 57, 90);
+    &:hover {
+      box-shadow: 8px 8px 10px rgb(238, 232, 232);
+    }
+    @include breakpoints("tab") {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin: 1em auto;
+      width: 95vw;
+    }
+    @include breakpoints("large-tab") {
+      width: 60%;
+    }
+    @include breakpoints("xl-tab") {
+      width: 45%;
+    }
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+    @include breakpoints("xl-tab") {
+      flex-grow: 0.8;
+    }
+    .title {
+      color: RGB(40, 57, 90);
+    }
+
+    .information {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 0.5em;
+      row-gap: 0.5em;
+      color: RGB(141, 139, 139);
+    }
+  }
+  .buttonSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    margin-bottom: 0.5em;
+    .fullTime {
+      width: 8em;
+      padding: 0.8em 0.5em;
+      border-radius: 0.5em;
+      font-weight: 700;
+      border: 1px solid RGB(144, 151, 223);
+      color: RGB(144, 151, 223);
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+}
